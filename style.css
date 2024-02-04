@@ -6,6 +6,10 @@ body {
     height: 5000px;
 }
 
+.fs-14 {
+    font-size: 14px;
+}
+
 /* header */
 
 header {
@@ -15,6 +19,14 @@ header {
 
 .header-nav a {
     position: relative;
+    cursor: pointer;
+    color: #EBEBF5;
+    opacity: 0.6;
+}
+
+.header-nav a:first-of-type {
+    opacity: 1;
+    font-weight: 500;
 }
 
 .header-nav .active::before {
@@ -38,7 +50,7 @@ header {
     padding-left: 33px;
 }
 
-/* sidebar */
+/* left sidebar */
 
 .left-sidebar {
     width: 75px;
@@ -64,4 +76,43 @@ header {
     background-color: #4e4e52;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* right sidebar */
+
+.right-sidebar {
+    position: fixed;
+    top: 75px;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    padding: 25px;
+    background-color: #1c1c1e;
+}
+
+.top-buyers {
+    background-color: #2c2c2e;
+    width: 250px;
+    padding: 8px;
+}
+
+.top-buyer-logo-container {
+    padding: 10px 0;
+}
+
+.top-buyer-logo {
+    width: 40px;
+    height: 40px;
+}
+
+.top-buyer-info {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.top-buyers div:last-of-type .top-buyer-info {
+    border-bottom: none;
+    padding-bottom: 0;
 }
