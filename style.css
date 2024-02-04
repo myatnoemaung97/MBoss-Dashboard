@@ -116,3 +116,12 @@ header {
     border-bottom: none;
     padding-bottom: 0;
 }
+
+.net-profit-card {
+    width: 250px;
+    background-color: #2c2c2e;
+    border-radius: 10px;
+    padding-right: 15px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}

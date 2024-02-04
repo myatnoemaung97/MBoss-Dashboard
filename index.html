@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard</title>
 
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -85,8 +85,11 @@
 
     </aside>
 
-    <main>
+    <main style="margin-top: 400px;">
         <!-- main content goes here -->
+        <div style="width: 200px; margin-left: 390px;">
+            <canvas id="myChart"></canvas>
+        </div>
     </main>
 
 
@@ -145,13 +148,44 @@
                 </div>
             </div>
         </div>
-        <div style="width: 100px; height: 500px; background-color: red;">
+        <div class="mt-4">
+            <div class="d-flex align-items-center mb-3">
+                <p class="m-0 fw-bold">My Net Profit</p>
+                <img class="ms-2" src="./icons/alert-circle.png" alt="alert icon">
+            </div>
 
+            <div class="net-profit-card d-flex justify-content-between align-items-center">
+                <div style="width: 60px;">
+                    <canvas id="profit-pie"></canvas>
+                </div>
+                <div>
+                    <p class="m-0 pt-2 pe-3">Last Week - <span style="font-size: 13px; color: #5e5ce6;">+25%</span></p>
+                </div>
+            </div>
         </div>
     </aside>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script>
+        const ctx = document.getElementById('profit-pie');
+
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    data: [75, 25],
+                }]
+            },
+            options: {
+                backgroundColor: ['#5e5ce6', 'black'],
+                borderColor: '#2c2c2e'
+            }
+        });
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>
