@@ -16,6 +16,10 @@
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/807f2d6ec6.js" crossorigin="anonymous"></script>
     <style>
+        body {
+            overflow-x: hidden;
+        }
+
         .error-links {
             text-decoration: none;
         }
@@ -90,7 +94,7 @@
 
     <main style="margin-top: 100px;">
         <!-- main content goes here -->
-        <div class="container-fluid" style=" margin-left: 100px">
+        <div style="margin-left: 100px;">
             <p class="text-primary">Data Entries Log</p>
             <div class="d-flex">
                 <div>
@@ -101,15 +105,15 @@
                     <p>M BOSS</p>
                 </div>
 
-                <a href="" style="font-size: larger">
-                    <i class="fa fa-plus ms-3 mt-2"></i>
+                <a href="" style="font-size: larger; margin-top: 2px;">
+                    <i class="fa fa-plus ms-3 mt-2" style="color: gray;"></i>
                 </a>
             </div>
         </div>
-        <div class="container-fluid" style="margin-left: 100px;">
+        <div style="margin-left: 100px;">
             <div class="row">
-                <div class="col-6">
-                    <div class="border border-white p-2" style="border-radius: 10px;">
+                <div class="col-7">
+                    <div class="border border-white p-1" style="border-radius: 10px;">
                         <div class="d-flex justify-content-between">
                             <p class="mt-2 ms-2">Data Entry Log History</p>
                             <div class="mt-2 me-2">
@@ -120,102 +124,117 @@
                         <div class="row">
                             <div class="col-6">
                                 <div>
-                                    <div style="width: 250px; margin-left: 27px;">
-                                        <canvas id="dashboard-pie"></canvas>
-                                    </div>
-                                    <div style="position: absolute; margin-top: -145px; margin-left: 120px;">
-                                        <p>Request <br> Summary</p>
+                                    <div style="width: 270px;">
+                                        <div style="margin-left: 90px;">
+                                            <canvas id="dashboard-pie"></canvas>
+                                        </div>
+
                                     </div>
                                 </div>
 
-                                <div class="row">
-                                    <div class="col-6 d-flex justify-content-center">
-                                        <span style="color: red; font-size: 25px;">&#9679</span>
-                                        <p class="mt-2" style="font-size: 13px;">shit</p>
-                                    </div>
-                                    <div class="col-6 d-flex justify-content-center">
-                                        <span style="color: red; font-size: 25px;">&#9679</span>
-                                        <p class="mt-2" style="font-size: 13px;">shit</p>
-                                    </div>
-                                    <div class="col-6 d-flex justify-content-center">
-                                        <span style="color: red; font-size: 25px;">&#9679</span>
-                                        <p class="mt-2" style="font-size: 13px;">shit</p>
-                                    </div>
-                                    <div class="col-6 d-flex justify-content-center">
-                                        <span style="color: red; font-size: 25px;">&#9679</span>
-                                        <p class="mt-2" style="font-size: 13px;">shit</p>
-                                    </div>
-                                    <div class="col-6 d-flex justify-content-center">
-                                        <span style="color: red; font-size: 25px;">&#9679</span>
-                                        <p class="mt-2" style="font-size: 13px;">shit</p>
-                                    </div>
-                                    <div class="col-6 d-flex justify-content-center">
-                                        <span style="color: red; font-size: 25px;">&#9679</span>
-                                        <p class="mt-2" style="font-size: 13px;">shit</p>
-                                    </div>
-                                    <div class="col-6 d-flex justify-content-center">
-                                        <span style="color: red; font-size: 25px;">&#9679</span>
-                                        <p class="mt-2" style="font-size: 13px;">shit</p>
-                                    </div>
-                                    <div class="col-6 d-flex justify-content-center">
-                                        <span style="color: red; font-size: 25px;">&#9679</span>
-                                        <p class="mt-2" style="font-size: 13px;">shit</p>
-                                    </div>
-                                    <div class="col-6 d-flex justify-content-center">
-                                        <span style="color: red; font-size: 25px;">&#9679</span>
-                                        <p class="mt-2" style="font-size: 13px;">shit</p>
-                                    </div>
-                                    <div class="col-6 d-flex justify-content-center">
-                                        <span style="color: red; font-size: 25px;">&#9679</span>
-                                        <p class="mt-2" style="font-size: 13px;">shit</p>
-                                    </div>
-                                    <div class="col-6 d-flex justify-content-center">
-                                        <span style="color: red; font-size: 25px;">&#9679</span>
-                                        <p class="mt-2" style="font-size: 13px;">shit</p>
-                                    </div>
-                                    <div class="col-6 d-flex justify-content-center">
-                                        <span style="color: red; font-size: 25px;">&#9679</span>
-                                        <p class="mt-2" style="font-size: 13px;">shit</p>
+                                <div class="d-flex mt-3 ms-2">
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: red; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
                                     </div>
 
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: green; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex ms-2">
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: blue; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
+                                    </div>
+
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: white; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex ms-2">
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: orange; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
+                                    </div>
+
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: yellow; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex ms-2">
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: pink; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
+                                    </div>
+
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: purple; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex ms-2">
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: lime; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
+                                    </div>
+
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: brown; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex ms-2">
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: aqua; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
+                                    </div>
+
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: magenta; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class=" col-6">
                                 <div class="row">
-                                    <div class="col-6 d-flex justify-content-end mt-5">
+                                    <div class="col-6 d-flex justify-content-end mt-4">
                                         <button style="width: 95px;" class="btn btn-secondary">January</button>
                                     </div>
-                                    <div class="col-6 mt-5">
+                                    <div class="col-6 mt-4">
                                         <button style="width: 95px;" class="btn btn-secondary">February</button>
                                     </div>
-                                    <div class="col-6 d-flex justify-content-end mt-5">
+                                    <div class="col-6 d-flex justify-content-end mt-4">
                                         <button style="width: 95px;" class="btn btn-secondary">March</button>
                                     </div>
-                                    <div class="col-6 mt-5">
+                                    <div class="col-6 mt-4">
                                         <button style="width: 95px;" class="btn btn-secondary">April</button>
                                     </div>
-                                    <div class="col-6 d-flex justify-content-end mt-5">
+                                    <div class="col-6 d-flex justify-content-end mt-4">
                                         <button style="width: 95px;" class="btn btn-secondary">May</button>
                                     </div>
-                                    <div class="col-6 mt-5">
+                                    <div class="col-6 mt-4">
                                         <button style="width: 95px;" class="btn btn-secondary">June</button>
                                     </div>
-                                    <div class="col-6 d-flex justify-content-end mt-5">
+                                    <div class="col-6 d-flex justify-content-end mt-4">
                                         <button style="width: 95px;" class="btn btn-secondary">July</button>
                                     </div>
-                                    <div class="col-6 mt-5">
+                                    <div class="col-6 mt-4">
                                         <button style="width: 95px;" class="btn btn-secondary">August</button>
                                     </div>
-                                    <div class="col-6 d-flex justify-content-end mt-5">
+                                    <div class="col-6 d-flex justify-content-end mt-4">
                                         <button style="width: 95px;" class="btn btn-secondary">September</button>
                                     </div>
-                                    <div class="col-6 mt-5">
+                                    <div class="col-6 mt-4">
                                         <button style="width: 95px;" class="btn btn-secondary">October</button>
                                     </div>
-                                    <div class="col-6 d-flex justify-content-end mt-5">
+                                    <div class="col-6 d-flex justify-content-end mt-4">
                                         <button style="width: 95px;" class="btn btn-secondary">November</button>
                                     </div>
-                                    <div class="col-6 mt-5">
+                                    <div class="col-6 mt-4">
                                         <button style="width: 95px;" class="btn btn-secondary">December</button>
                                     </div>
                                 </div>
@@ -224,300 +243,130 @@
                     </div>
 
                 </div>
-                <div class="col-6">
-                    <div class="row">
-                        <div class="col-6">
-                            <a class="error-links" href="">
-                                <div style="position: absolute;">
-                                    <img width="250px" src="./images/vector-BDF.png" alt="">
+                <div class="col-5">
+                    <div class="d-flex">
+                        <div style="width: 200px; margin-left: 32px;">
+                            <div class="border p-1" style="border-radius: 10px; background-color: crimson;">
+                                <p style="font-size: 12px; text-align: center;">Closed This Quarter</p>
+                                <h5 style="text-align: center;">100</h5>
+                                <h6 style="text-align: center;">Request Errors</h6>
+                                <span style="font-size: 11px;">Start</span><span
+                                    style="font-size: 11px; margin-left: 140px;">End</span>
+                                <div style="font-size: 11px;">
+                                    <span>01/01/2024</span><span style="margin-left: 69px;">01/02/2024</span>
                                 </div>
-                                <div style="position: relative; margin-left: 70px;">
-                                    <p class="mt-2" style="color: black; font-size: 13px;">Closed This Quarter</p>
-                                </div>
-                                <div style="position: relative; margin-left: 100px; margin-bottom: 0;">
-                                    <p class="" style="color: black; font-size: 25px; margin-bottom: 0;">100</p>
-                                </div>
-                                <div style="position: relative; margin-left: 45px; margin-top: 0;">
-                                    <p class="" style="color: black; font-size: 25px; margin-top: 0;">Request Errors</p>
-                                </div>
-                                <div style="position: relative; width: 250px; height: 25px;">
-                                    <div class="d-flex justify-content-between" style="margin-top: 30px;">
-                                        <p class="ms-3" style="color: black; font-size: 13px;">Start
-                                        </p>
-                                        <p class="me-3" style="color: black; font-size: 13px;">End</p>
-                                    </div>
-                                </div>
-                                <div style="position: relative; width: 250px;">
-                                    <div class="d-flex justify-content-between">
-                                        <p class="ms-3" style="color: black; font-size: 13px;">12/12/2023
-                                        </p>
-                                        <p class="me-3" style="color: black; font-size: 13px;">12/12/2024</p>
-                                    </div>
-                                </div>
-                                <div style="position: relative; margin-left: 90px;">
-                                    <p class="" style="color: black; font-size: 13px; margin-top: 0;">Error Entry</p>
-                                </div>
-                            </a>
+                                <p style="font-size: 12px; text-align: center;margin-top: 13px;">Error Entry</p>
+                            </div>
                         </div>
-                        <div class="col-6">
-                            <a class="error-links" href="">
-                                <div style="position: absolute;">
-                                    <img width="250px" src="./images/vector-kpD.png" alt="">
+                        <div style="width: 200px; margin-left: 57px;">
+                            <div class="border p-1" style="border-radius: 10px; background-color: blue;">
+                                <p style="font-size: 12px; text-align: center;">Closed This Quarter</p>
+                                <h5 style="text-align: center;">100</h5>
+                                <h6 style="text-align: center;">Request Errors</h6>
+                                <span style="font-size: 11px;">Start</span><span
+                                    style="font-size: 11px; margin-left: 140px;">End</span>
+                                <div style="font-size: 11px;">
+                                    <span>01/01/2024</span><span style="margin-left: 69px;">01/02/2024</span>
                                 </div>
-                                <div style="position: relative; margin-left: 70px;">
-                                    <p class="mt-2" style="color: black; font-size: 13px;">Closed This Quarter</p>
-                                </div>
-                                <div style="position: relative; margin-left: 100px; margin-bottom: 0;">
-                                    <p class="" style="color: black; font-size: 25px; margin-bottom: 0;">100</p>
-                                </div>
-                                <div style="position: relative; margin-left: 45px; margin-top: 0;">
-                                    <p class="" style="color: black; font-size: 25px; margin-top: 0;">Request Errors</p>
-                                </div>
-                                <div style="position: relative; width: 250px; height: 25px;">
-                                    <div class="d-flex justify-content-between" style="margin-top: 30px;">
-                                        <p class="ms-3" style="color: black; font-size: 13px;">Start
-                                        </p>
-                                        <p class="me-3" style="color: black; font-size: 13px;">End</p>
-                                    </div>
-                                </div>
-                                <div style="position: relative; width: 250px;">
-                                    <div class="d-flex justify-content-between">
-                                        <p class="ms-3" style="color: black; font-size: 13px;">12/12/2023
-                                        </p>
-                                        <p class="me-3" style="color: black; font-size: 13px;">12/12/2024</p>
-                                    </div>
-                                </div>
-                                <div style="position: relative; margin-left: 90px;">
-                                    <p class="" style="color: black; font-size: 13px; margin-top: 0;">Error Entry</p>
-                                </div>
-                            </a>
+                                <p style="font-size: 12px; text-align: center;margin-top: 13px;">Error Entry</p>
+                            </div>
                         </div>
-                        <div class="col-6 mt-5">
-                            <a class="error-links" href="">
-                                <div style="position: absolute;">
-                                    <img width="250px" src="./images/vector-HWV.png" alt="">
-                                </div>
-                                <div style="position: relative; margin-left: 70px;">
-                                    <p class="mt-2" style="color: black; font-size: 13px;">Closed This Quarter</p>
-                                </div>
-                                <div style="position: relative; margin-left: 100px; margin-bottom: 0;">
-                                    <p class="" style="color: black; font-size: 25px; margin-bottom: 0;">100</p>
-                                </div>
-                                <div style="position: relative; margin-left: 45px; margin-top: 0;">
-                                    <p class="" style="color: black; font-size: 25px; margin-top: 0;">Request Errors</p>
-                                </div>
-                                <div style="position: relative; width: 250px; height: 25px;">
-                                    <div class="d-flex justify-content-between" style="margin-top: 30px;">
-                                        <p class="ms-3" style="color: black; font-size: 13px;">Start
-                                        </p>
-                                        <p class="me-3" style="color: black; font-size: 13px;">End</p>
-                                    </div>
-                                </div>
-                                <div style="position: relative; width: 250px;">
-                                    <div class="d-flex justify-content-between">
-                                        <p class="ms-3" style="color: black; font-size: 13px;">12/12/2023
-                                        </p>
-                                        <p class="me-3" style="color: black; font-size: 13px;">12/12/2024</p>
-                                    </div>
-                                </div>
-                                <div style="position: relative; margin-left: 90px;">
-                                    <p class="" style="color: black; font-size: 13px; margin-top: 0;">Error Entry</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-6 mt-5">
-                            <a class="error-links" href="">
-                                <div style="position: absolute;">
-                                    <img width="250px" src="./images/vector-1YR.png" alt="">
-                                </div>
-                                <div style="position: relative; margin-left: 70px;">
-                                    <p class="mt-2" style="color: black; font-size: 13px;">Closed This Quarter</p>
-                                </div>
-                                <div style="position: relative; margin-left: 100px; margin-bottom: 0;">
-                                    <p class="" style="color: black; font-size: 25px; margin-bottom: 0;">100</p>
-                                </div>
-                                <div style="position: relative; margin-left: 45px; margin-top: 0;">
-                                    <p class="" style="color: black; font-size: 25px; margin-top: 0;">Request Errors</p>
-                                </div>
-                                <div style="position: relative; width: 250px; height: 25px;">
-                                    <div class="d-flex justify-content-between" style="margin-top: 30px;">
-                                        <p class="ms-3" style="color: black; font-size: 13px;">Start
-                                        </p>
-                                        <p class="me-3" style="color: black; font-size: 13px;">End</p>
-                                    </div>
-                                </div>
-                                <div style="position: relative; width: 250px;">
-                                    <div class="d-flex justify-content-between">
-                                        <p class="ms-3" style="color: black; font-size: 13px;">12/12/2023
-                                        </p>
-                                        <p class="me-3" style="color: black; font-size: 13px;">12/12/2024</p>
-                                    </div>
-                                </div>
-                                <div style="position: relative; margin-left: 90px;">
-                                    <p class="" style="color: black; font-size: 13px; margin-top: 0;">Error Entry</p>
-                                </div>
-                        </div>
-                        </a>
                     </div>
-
+                    <div class="d-flex mt-5">
+                        <div style="width: 200px; margin-left: 32px;">
+                            <div class="border p-1" style="border-radius: 10px; background-color: crimson;">
+                                <p style="font-size: 12px; text-align: center;">Closed This Quarter</p>
+                                <h5 style="text-align: center;">100</h5>
+                                <h6 style="text-align: center;">Request Errors</h6>
+                                <span style="font-size: 11px;">Start</span><span
+                                    style="font-size: 11px; margin-left: 140px;">End</span>
+                                <div style="font-size: 11px;">
+                                    <span>01/01/2024</span><span style="margin-left: 69px;">01/02/2024</span>
+                                </div>
+                                <p style="font-size: 12px; text-align: center;margin-top: 13px;">Error Entry</p>
+                            </div>
+                        </div>
+                        <div style="width: 200px; margin-left: 57px;">
+                            <div class="border p-1" style="border-radius: 10px; background-color: blue;">
+                                <p style="font-size: 12px; text-align: center;">Closed This Quarter</p>
+                                <h5 style="text-align: center;">100</h5>
+                                <h6 style="text-align: center;">Request Errors</h6>
+                                <span style="font-size: 11px;">Start</span><span
+                                    style="font-size: 11px; margin-left: 140px;">End</span>
+                                <div style="font-size: 11px;">
+                                    <span>01/01/2024</span><span style="margin-left: 69px;">01/02/2024</span>
+                                </div>
+                                <p style="font-size: 12px; text-align: center;margin-top: 13px;">Error Entry</p>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
-            <div class="row mt-4">
-                <div class="col-3">
-                    <div style="position: absolute;">
-                        <img width="250px" src="./images/vector-6n1.png" alt="">
-                    </div>
-                    <div style="position: relative; margin-left: 70px;">
-                        <p class="mt-2" style="color: black; font-size: 13px;">Closed This Quarter</p>
-
-                    </div>
-                    <div style="position: relative; margin-left: 100px; margin-bottom: 0;">
-                        <p class="" style="color: black; font-size: 25px; margin-bottom: 0;">100</p>
-
-                    </div>
-                    <div style="position: relative; margin-left: 45px; margin-top: 0;">
-                        <p class="" style="color: black; font-size: 25px; margin-top: 0;">Request Errors</p>
-
-                    </div>
-                    <div style="position: relative; width: 250px; height: 25px;">
-                        <div class="d-flex justify-content-between" style="margin-top: 30px;">
-                            <p class="ms-3" style="color: black; font-size: 13px;">Start
-
-                            </p>
-                            <p class="me-3" style="color: black; font-size: 13px;">End</p>
+            <div class="d-flex mt-4">
+                <div style="width: 200px;">
+                    <div class="border p-1" style="border-radius: 10px; background-color: crimson;">
+                        <p style="font-size: 12px; text-align: center;">Closed This Quarter</p>
+                        <h5 style="text-align: center;">100</h5>
+                        <h6 style="text-align: center;">Request Errors</h6>
+                        <span style="font-size: 11px;">Start</span><span
+                            style="font-size: 11px; margin-left: 140px;">End</span>
+                        <div style="font-size: 11px;">
+                            <span>01/01/2024</span><span style="margin-left: 69px;">01/02/2024</span>
                         </div>
-
-                    </div>
-                    <div style="position: relative; width: 250px;">
-                        <div class="d-flex justify-content-between">
-                            <p class="ms-3" style="color: black; font-size: 13px;">12/12/2023
-
-                            </p>
-                            <p class="me-3" style="color: black; font-size: 13px;">12/12/2024</p>
-                        </div>
-
-                    </div>
-                    <div style="position: relative; margin-left: 90px;">
-                        <p class="" style="color: black; font-size: 13px; margin-top: 0;">Error Entry</p>
-
+                        <p style="font-size: 12px; text-align: center;margin-top: 13px;">Error Entry</p>
                     </div>
                 </div>
-                <div class="col-3">
-                    <div style="position: absolute;">
-                        <img width="250px" src="./images/vector-5zD.png" alt="">
-                    </div>
-                    <div style="position: relative; margin-left: 70px;">
-                        <p class="mt-2" style="color: black; font-size: 13px;">Closed This Quarter</p>
-
-                    </div>
-                    <div style="position: relative; margin-left: 100px; margin-bottom: 0;">
-                        <p class="" style="color: black; font-size: 25px; margin-bottom: 0;">100</p>
-
-                    </div>
-                    <div style="position: relative; margin-left: 45px; margin-top: 0;">
-                        <p class="" style="color: black; font-size: 25px; margin-top: 0;">Request Errors</p>
-
-                    </div>
-                    <div style="position: relative; width: 250px; height: 25px;">
-                        <div class="d-flex justify-content-between" style="margin-top: 30px;">
-                            <p class="ms-3" style="color: black; font-size: 13px;">Start
-
-                            </p>
-                            <p class="me-3" style="color: black; font-size: 13px;">End</p>
+                <div style="width: 200px; margin-left:45px">
+                    <div class="border p-1" style="border-radius: 10px; background-color: crimson;">
+                        <p style="font-size: 12px; text-align: center;">Closed This Quarter</p>
+                        <h5 style="text-align: center;">100</h5>
+                        <h6 style="text-align: center;">Request Errors</h6>
+                        <span style="font-size: 11px;">Start</span><span
+                            style="font-size: 11px; margin-left: 140px;">End</span>
+                        <div style="font-size: 11px;">
+                            <span>01/01/2024</span><span style="margin-left: 69px;">01/02/2024</span>
                         </div>
-
-                    </div>
-                    <div style="position: relative; width: 250px;">
-                        <div class="d-flex justify-content-between">
-                            <p class="ms-3" style="color: black; font-size: 13px;">12/12/2023
-
-                            </p>
-                            <p class="me-3" style="color: black; font-size: 13px;">12/12/2024</p>
-                        </div>
-
-                    </div>
-                    <div style="position: relative; margin-left: 90px;">
-                        <p class="" style="color: black; font-size: 13px; margin-top: 0;">Error Entry</p>
-
+                        <p style="font-size: 12px; text-align: center;margin-top: 13px;">Error Entry</p>
                     </div>
                 </div>
-                <div class="col-3">
-                    <div style="position: absolute;">
-                        <img width="250px" src="./images/vector-2iy.png" alt="">
-                    </div>
-                    <div style="position: relative; margin-left: 70px;">
-                        <p class="mt-2" style="color: black; font-size: 13px;">Closed This Quarter</p>
-
-                    </div>
-                    <div style="position: relative; margin-left: 100px; margin-bottom: 0;">
-                        <p class="" style="color: black; font-size: 25px; margin-bottom: 0;">100</p>
-
-                    </div>
-                    <div style="position: relative; margin-left: 45px; margin-top: 0;">
-                        <p class="" style="color: black; font-size: 25px; margin-top: 0;">Request Errors</p>
-
-                    </div>
-                    <div style="position: relative; width: 250px; height: 25px;">
-                        <div class="d-flex justify-content-between" style="margin-top: 30px;">
-                            <p class="ms-3" style="color: black; font-size: 13px;">Start
-
-                            </p>
-                            <p class="me-3" style="color: black; font-size: 13px;">End</p>
+                <div style="width: 200px; margin-left:45px">
+                    <div class="border p-1" style="border-radius: 10px; background-color: crimson;">
+                        <p style="font-size: 12px; text-align: center;">Closed This Quarter</p>
+                        <h5 style="text-align: center;">100</h5>
+                        <h6 style="text-align: center;">Request Errors</h6>
+                        <span style="font-size: 11px;">Start</span><span
+                            style="font-size: 11px; margin-left: 140px;">End</span>
+                        <div style="font-size: 11px;">
+                            <span>01/01/2024</span><span style="margin-left: 69px;">01/02/2024</span>
                         </div>
-
-                    </div>
-                    <div style="position: relative; width: 250px;">
-                        <div class="d-flex justify-content-between">
-                            <p class="ms-3" style="color: black; font-size: 13px;">12/12/2023
-
-                            </p>
-                            <p class="me-3" style="color: black; font-size: 13px;">12/12/2024</p>
-                        </div>
-
-                    </div>
-                    <div style="position: relative; margin-left: 90px;">
-                        <p class="" style="color: black; font-size: 13px; margin-top: 0;">Error Entry</p>
-
+                        <p style="font-size: 12px; text-align: center;margin-top: 13px;">Error Entry</p>
                     </div>
                 </div>
-                <div class="col-3">
-                    <div style="position: absolute;">
-                        <img width="250px" src="./images/vector-BDF.png" alt="">
-                    </div>
-                    <div style="position: relative; margin-left: 70px;">
-                        <p class="mt-2" style="color: black; font-size: 13px;">Closed This Quarter</p>
-
-                    </div>
-                    <div style="position: relative; margin-left: 100px; margin-bottom: 0;">
-                        <p class="" style="color: black; font-size: 25px; margin-bottom: 0;">100</p>
-
-                    </div>
-                    <div style="position: relative; margin-left: 45px; margin-top: 0;">
-                        <p class="" style="color: black; font-size: 25px; margin-top: 0;">Request Errors</p>
-
-                    </div>
-                    <div style="position: relative; width: 250px; height: 25px;">
-                        <div class="d-flex justify-content-between" style="margin-top: 30px;">
-                            <p class="ms-3" style="color: black; font-size: 13px;">Start
-
-                            </p>
-                            <p class="me-3" style="color: black; font-size: 13px;">End</p>
+                <div style="width: 200px; margin-left:45px">
+                    <div class="border p-1" style="border-radius: 10px; background-color: crimson;">
+                        <p style="font-size: 12px; text-align: center;">Closed This Quarter</p>
+                        <h5 style="text-align: center;">100</h5>
+                        <h6 style="text-align: center;">Request Errors</h6>
+                        <span style="font-size: 11px;">Start</span><span
+                            style="font-size: 11px; margin-left: 140px;">End</span>
+                        <div style="font-size: 11px;">
+                            <span>01/01/2024</span><span style="margin-left: 69px;">01/02/2024</span>
                         </div>
-
+                        <p style="font-size: 12px; text-align: center;margin-top: 13px;">Error Entry</p>
                     </div>
-                    <div style="position: relative; width: 250px;">
-                        <div class="d-flex justify-content-between">
-                            <p class="ms-3" style="color: black; font-size: 13px;">12/12/2023
-
-                            </p>
-                            <p class="me-3" style="color: black; font-size: 13px;">12/12/2024</p>
+                </div>
+                <div style="width: 200px; margin-left:45px">
+                    <div class="border p-1" style="border-radius: 10px; background-color: crimson;">
+                        <p style="font-size: 12px; text-align: center;">Closed This Quarter</p>
+                        <h5 style="text-align: center;">100</h5>
+                        <h6 style="text-align: center;">Request Errors</h6>
+                        <span style="font-size: 11px;">Start</span><span
+                            style="font-size: 11px; margin-left: 140px;">End</span>
+                        <div style="font-size: 11px;">
+                            <span>01/01/2024</span><span style="margin-left: 69px;">01/02/2024</span>
                         </div>
-
-                    </div>
-                    <div style="position: relative; margin-left: 90px;">
-                        <p class="" style="color: black; font-size: 13px; margin-top: 0;">Error Entry</p>
-
+                        <p style="font-size: 12px; text-align: center;margin-top: 13px;">Error Entry</p>
                     </div>
                 </div>
             </div>

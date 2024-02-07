@@ -15,6 +15,19 @@
 
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/807f2d6ec6.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        .table thead tr th {
+            background-color: gray;
+        }
+
+        .table tbody tr td {
+            background-color: gray;
+        }
+    </style>
 </head>
 
 <body>
@@ -85,7 +98,7 @@
 
     <main style="margin-top: 80px">
         <!-- main content goes here -->
-        <div class="container-fluid" style=" margin-left: 100px">
+        <div style=" margin-left: 100px">
             <p class="text-primary">Data Entries Log</p>
             <div class="d-flex">
                 <div>
@@ -96,147 +109,203 @@
                     <p>M BOSS</p>
                 </div>
 
-                <a href="" style="font-size: larger">
-                    <i class="fa fa-plus ms-3 mt-2"></i>
+                <a href="" style="font-size: larger; margin-top: 2px;">
+                    <i class="fa fa-plus ms-3 mt-2" style="color: gray;"></i>
                 </a>
 
             </div>
 
         </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-4" style="margin-left: 100px;">
-                    <div style="position: absolute;">
-                        <img width="250px" src="./images/vector-BDF.png" alt="">
+        <div class="col-11">
+            <p class="text-end">Request Entry Errors</p>
+
+        </div>
+        <div style="margin-left: 100px;">
+            <div class="d-flex">
+                <div style="width: 200px; margin-right: 50px;">
+                    <div class="border p-1" style="border-radius: 10px; background-color: crimson;">
+                        <p style="font-size: 12px; text-align: center;">Closed This Quarter</p>
+                        <h5 style="text-align: center;">100</h5>
+                        <h6 style="text-align: center;">Request Errors</h6>
+                        <span style="font-size: 11px;">Start</span><span
+                            style="font-size: 11px; margin-left: 140px;">End</span>
+                        <div style="font-size: 11px;">
+                            <span>01/01/2024</span><span style="margin-left: 69px;">01/02/2024</span>
+                        </div>
+                        <p style="font-size: 12px; text-align: center;margin-top: 13px;">Error Entry</p>
                     </div>
-                    <div style="position: relative; margin-left: 70px;">
-                        <p class="mt-2" style="color: black; font-size: 13px;">Closed This Quarter</p>
-
-                    </div>
-                    <div style="position: relative; margin-left: 100px; margin-bottom: 0;">
-                        <p class="" style="color: black; font-size: 25px; margin-bottom: 0;">100</p>
-
-                    </div>
-                    <div style="position: relative; margin-left: 45px; margin-top: 0;">
-                        <p class="" style="color: black; font-size: 25px; margin-top: 0;">Request Errors</p>
-
-                    </div>
-                    <div style="position: relative; width: 250px; height: 25px;">
-                        <div class="d-flex justify-content-between" style="margin-top: 30px;">
-                            <p class="ms-3" style="color: black; font-size: 13px;">Start
-
-                            </p>
-                            <p class="me-3" style="color: black; font-size: 13px;">End</p>
+                    <div class="row mt-3 gy-3">
+                        <div class="col-6">
+                            <button class="btn btn-secondary" style="width: 95px;">January</button>
                         </div>
-
-                    </div>
-                    <div style="position: relative; width: 250px;">
-                        <div class="d-flex justify-content-between">
-                            <p class="ms-3" style="color: black; font-size: 13px;">12/12/2023
-
-                            </p>
-                            <p class="me-3" style="color: black; font-size: 13px;">12/12/2024</p>
+                        <div class="col-6">
+                            <button class="btn btn-secondary" style="width: 95px;">February</button>
                         </div>
-
-                    </div>
-                    <div style="position: relative; margin-left: 90px;">
-                        <p class="" style="color: black; font-size: 13px; margin-top: 0;">Error Entry</p>
-
-                    </div>
-                    <div class="row">
-                        <div class="col-4 mt-2">
-                            <button style="width: 95px;" class="btn btn-secondary">January</button>
+                        <div class="col-6">
+                            <button class="btn btn-secondary" style="width: 95px;">March</button>
                         </div>
-                        <div class="col-4 mt-2">
-                            <button style="width: 95px;" class="btn btn-secondary">February</button>
+                        <div class="col-6">
+                            <button class="btn btn-secondary" style="width: 95px;">April</button>
                         </div>
-                        <div class="col-4"></div>
-                        <div class="col-4 mt-2">
-                            <button style="width: 95px;" class="btn btn-secondary">March</button>
+                        <div class="col-6">
+                            <button class="btn btn-secondary" style="width: 95px;">May</button>
                         </div>
-                        <div class="col-4 mt-2">
-                            <button style="width: 95px;" class="btn btn-secondary">April</button>
+                        <div class="col-6">
+                            <button class="btn btn-secondary" style="width: 95px;">June</button>
                         </div>
-                        <div class="col-4"></div>
-                        <div class="col-4 mt-2">
-                            <button style="width: 95px;" class="btn btn-secondary">May</button>
+                        <div class="col-6">
+                            <button class="btn btn-secondary" style="width: 95px;">July</button>
                         </div>
-                        <div class="col-4 mt-2">
-                            <button style="width: 95px;" class="btn btn-secondary">June</button>
+                        <div class="col-6">
+                            <button class="btn btn-secondary" style="width: 95px;">August</button>
                         </div>
-                        <div class="col-4"></div>
-
-                        <div class="col-4 mt-2">
-                            <button style="width: 95px;" class="btn btn-secondary">July</button>
+                        <div class="col-6">
+                            <button class="btn btn-secondary" style="width: 95px;">September</button>
                         </div>
-                        <div class="col-4 mt-2">
-                            <button style="width: 95px;" class="btn btn-secondary">August</button>
+                        <div class="col-6">
+                            <button class="btn btn-secondary" style="width: 95px;">October</button>
                         </div>
-                        <div class="col-4"></div>
-
-                        <div class="col-4 mt-2">
-                            <button style="width: 95px;" class="btn btn-secondary">September</button>
+                        <div class="col-6">
+                            <button class="btn btn-secondary" style="width: 95px;">November</button>
                         </div>
-                        <div class="col-4 mt-2">
-                            <button style="width: 95px;" class="btn btn-secondary">October</button>
-                        </div>
-                        <div class="col-4"></div>
-
-                        <div class="col-4 mt-2">
-                            <button style="width: 95px;" class="btn btn-secondary">November</button>
-                        </div>
-                        <div class="col-4 mt-2">
-                            <button style="width: 95px;" class="btn btn-secondary">December</button>
+                        <div class="col-6">
+                            <button class="btn btn-secondary" style="width: 95px;">December</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-7">
-                    <div class="text-end mb-3" style="color: gray;">
-                        Request Entry Errors
-                    </div>
-                    <div class="border border-white p-4" style="border-radius: 5px;">
+
+                <div style="width: 830px;">
+
+                    <div class="border border-white p-4" style="border-radius: 20px;">
                         <div class="d-flex justify-content-between">
-                            <p style="color: black;">Overall Request Errors</p>
-                            <p>Monthly
+                            <p style="color: black;font-size: 20px;">Overall Request Errors</p>
+                            <p style="font-size: 23px;">Monthly
                                 <a href="" style="color: gray;">
                                     <i class="fa fa-chevron-down"></i>
                                 </a>
                             </p>
                         </div>
-                        <hr style="color: white;">
+                        <hr style="background-color: white; border:  3px solid white; border-radius: 10px;">
                         <canvas id="dashboard-pie"></canvas>
                     </div>
 
                 </div>
             </div>
+            <div class="col-11">
+                <table class="table table-hover mt-5">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Time Frame</th>
+                            <th>Date</th>
+                            <th>Permission Type</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sout Khwet</td>
+                            <td>Login Error</td>
+                            <td>12:00 PM</td>
+                            <td>1/1/2024</td>
+                            <td>Admin</td>
+                            <td>More</td>
+                        </tr>
+                        <tr>
+                            <td>Sout Khwet</td>
+                            <td>Login Error</td>
+                            <td>12:00 PM</td>
+                            <td>1/1/2024</td>
+                            <td>Admin</td>
+                            <td>More</td>
+                        </tr>
+                        <tr>
+                            <td>Sout Khwet</td>
+                            <td>Login Error</td>
+                            <td>12:00 PM</td>
+                            <td>1/1/2024</td>
+                            <td>Admin</td>
+                            <td>More</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
+
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script>
-        const ctx2 = document.getElementById("dashboard-pie");
+        const ctx = document.getElementById("dashboard-pie");
         const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-        new Chart(ctx2, {
+        const gradientColors = ['#80b6f4', '#fad874', '#f49080'];
+
+        new Chart(ctx, {
             type: "line",
             data: {
                 labels: labels,
                 datasets: [{
                     label: 'My First Dataset',
                     data: [65, 59, 80, 81, 56, 55, 40, 50, 40, 70, 50, 20],
-                    fill: false,
-                    borderColor: '#1B59F8',
-                    tension: 0.1
+                    fill: true,
+                    backgroundColor: (context) => {
+                        const bgColor = [
+                            'rgba(255,26,104,0.2)',
+                            'rgba(54,162,235,0.2)',
+                            'rgba(255,206,86,0.2)',
+                            'rgba(75,192,192,0.2)',
+                            'rgba(153,102,255,0.2)',
+                            'rgba(255,159,64,0.2)',
+                            'rgba(0,0,0,0.2)'
+                        ];
+                        if (!context.chart.chartArea) {
+                            return;
+                        }
+                        const { ctx, data, chartArea: { top, bottom } } = context.chart;
+                        const gradientBg = ctx.createLinearGradient(0, top, 0, bottom);
+                        const colorTranches = 1 / (bgColor.length - 1);
+                        for (let i = 0; i < bgColor.length; i++) {
+                            gradientBg.addColorStop(0 + i * colorTranches, bgColor[i])
+
+                        }
+
+                        return gradientBg;
+                    },
+                    borderColor: [
+                        'rgba(255,26,104,1)',
+                        // 'rgba(54,162,235,1)',
+                        // 'rgba(255,206,86,1)',
+                        // 'rgba(75,192,192,1)',
+                        // 'rgba(153,102,255,1)',
+                        // 'rgba(255,159,64,1)',
+                        // 'rgba(0,0,0,1)'
+                    ],
+                    pointBackgroundColor: [
+                        'rgba(255,26,104,1)',
+                        // 'rgba(54,162,235,1)',
+                        // 'rgba(255,206,86,1)',
+                        // 'rgba(75,192,192,1)',
+                        // 'rgba(153,102,255,1)',
+                        // 'rgba(255,159,64,1)',
+                        // 'rgba(0,0,0,1)'
+                    ],
+                    tension: 0.5
                 }]
             },
             options: {
                 borderWidth: 2,
             },
         });
+
     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+
+    </script>
 </body>
 
 </html>
