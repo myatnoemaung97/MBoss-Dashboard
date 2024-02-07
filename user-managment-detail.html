@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management Details</title>
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/807f2d6ec6.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <header class="fixed-top d-flex justify-content-between align-items-center border-bottom border-black border-1 p-3">
+        <div class="d-flex align-items-center ps-3">
+            <nav class="header-nav">
+                <a class="me-4 text-white text-decoration-none opacity-50 active">Dashboard</a>
+                <a class="me-4 text-white text-decoration-none fw-semibold">Pending</a>
+                <a class="me-4 text-white text-decoration-none opacity-50">Role Management</a>
+            </nav>
+            <div class="search-icon ms-3"><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+        <div class="d-flex align-items-center">
+            <a class="my-0 me-3 text-decoration-none text-white" href="#">M BOSS</a>
+            <div class="dropdown me-3">
+                <button class="btn btn-secondary icon-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="rounded-2" src="./images/admin.jpeg" alt="admin image"
+                        style="width: 50px; height: 50px;">
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+            <div>
+                <img src="./icons/sun.png" alt="sun icon">
+            </div>
+        </div>
+    </header>
+    <aside
+        class="left-sidebar d-flex flex-column align-items-center border-end border-black border-1 position-fixed top-0 bottom-0 start-0"
+        style="width: 75px;">
+
+        <button class="bg-transparent border-0 d-flex justify-content-center align-items-center"
+            style="width: 100%; height: 75px;">
+            <i class="fa-solid fa-bars" style="color: #a3a3a3;"></i>
+        </button>
+
+        <div class="py-3">
+            <img src="./images/mboss.png" alt="m boss logo" style="width: 45px; height: 45px;">
+        </div>
+
+        <div class="sidebar-icons d-flex flex-column align-items-center mt-3">
+            <div class="active">
+                <img src="./icons/human-human-avatar-male-icon-with-png-and-vector-format-for-free-19807 1.png"
+                    alt="user icon">
+            </div>
+            <div class="mt-1 ">
+                <img src="./icons/clock.png" alt="clock icon">
+            </div>
+            <div class="mt-1">
+                <img src="./icons/pie-chart.png" alt="pie-chart icon">
+            </div>
+            <div class="mt-1">
+                <img src="./icons/globe.png" alt="globe icon">
+            </div>
+            <div class="mt-1">
+                <img src="./icons/loader.png" alt="loader icon">
+            </div>
+            <div class="mt-1">
+                <img src="./icons/command.png" alt="command icon">
+            </div>
+        </div>
+
+    </aside>
+
+    <main style="margin-right: 300px;">
+        <!-- main content goes here -->
+        <div class="d-flex flex-column">
+            <p class="fs-12 --purple-color fw-semibold">Log Viewer</p>
+            <div class="d-flex align-items-center">
+                <img src="./images/mboss.png" alt="mboss logo" width="45" height="45">
+                <h1 class="fw-semibold fs-26 ms-3">M BOSS</h1>
+                <div class="ms-3">
+                    <button class="btn btn-secondary rounded-circle border-0"
+                        style="background-color: rgb(58, 58, 60); font-size: 18px;">
+                        +
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mt-4 pe-3 w-100">
+            <div class="d-flex align-items-center">
+                <p class="m-0">Filter</p>
+                <button class="gray-border text-light bg-transparent rounded px-2 ms-2">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </button>
+            </div>
+            <div class="d-flex align-items-center fs-12">
+                <p class="m-0 text-secondary">Provision Month</p>
+                <div class="gray-border p-1 ms-3 rounded">
+                    March 2020 <i class="fa-solid fa-calendar-days ms-2 --purple-color"></i>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex align-items-center mt-4">
+            <img src="./images/profile-pic.png" alt="profile picture" width="80" height="80">
+            <div class="d-flex flex-fill justify-content-between align-items-center ms-3 pe-3">
+                <p style="font-size: 30px; color: #9f9f9f;">Billion Smile</p>
+                <p style="font-size: 25px; color: #717173;">Occupation - Seller</p>
+                <p style="font-size: 25px; color: #717173;">Status - <span class="text-success">Active</span></p>
+            </div>
+        </div>
+        <section class="management-detail d-flex align-items-start ps-2 pe-2 mt-4">
+            <div>
+                <div class="sales-overview rounded-4 px-2 py-3">
+                    <div>
+                        <p class="m-0 fw-bold">Sales Overview</p>
+                        <p class="m-0 fs-14"><span class="text-success">(+5) more</span> <span class="opacity-75">in
+                                2024</span></p>
+                    </div>
+                    <div class="mt-3" style="width: 100%;">
+                        <canvas id="sales-chart"></canvas>
+                    </div>
+                </div>
+                <div class="referral-tracking px-5 py-4 mt-4 rounded-4">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <p class="m-0 fw-bold">Referral Tracking</p>
+                        <button class="border-0 rounded-3" style="background-color: #252a41;">
+                            <img src="./icons/more_horiz.png" alt="more icon">
+                        </button>
+                    </div>
+
+                    <div class="d-flex align-items-start justify-content-between gap-3 mt-4">
+                        <div class="mt-3">
+                            <div class="ps-4 pt-3 pb-4 rounded-4" style="width: 200px; background-color: #080e2c;">
+                                <p class="m-0 fs-14 opacity-75">Invited</p>
+                                <p class="m-0 fw-semibold">145 people</p>
+                            </div>
+                            <div class="ps-4 pt-3 pb-4 mt-4 rounded-4" style="width: 200px; background-color: #080e2c;">
+                                <p class="m-0 fs-14 opacity-75">Bonus</p>
+                                <p class="m-0 fw-semibold">1450 Bonus Coins</p>
+                            </div>
+                        </div>
+                        <div class="position-relative" style="width: 50%; max-width: 200px;">
+                            <canvas id="referral-chart">
+                            </canvas>
+                            <div class="position-absolute top-50 start-50 translate-middle text-center pb-2">
+                                <p class="m-0 fs-14 opacity-75">Reputation Score</p>
+                                <p class="m-0 fs-2 fw-bold">99.3</p>
+                                <p class="m-0 fs-14 opacity-75">Total Score</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-fill orders-overview ms-3 py-4 px-3 rounded-4">
+                <div>
+                    <p class="m-0 fw-bold">Orders overview</p>
+                    <div class="d-flex align-items-center fs-14">
+                        <img src="./icons/circle.png" alt="circle icon">
+                        <span class="ms-1 mt-1 opacity-75">+30% this month</span>
+                    </div>
+
+                    <div class="orders-overview-items">
+                        <div class="d-flex align-items-start fs-14 mt-3">
+                            <img class="pt-1" src="./icons/bell.png" alt="bell icon">
+                            <div class="d-flex flex-column ms-3">
+                                <span>Notifications Received</span>
+                                <span class="opacity-75">170 times</span>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start fs-14 mt-3">
+                            <img class="pt-1" src="./icons/time.png" alt="time icon">
+                            <div class="d-flex flex-column ms-3">
+                                <span>Average Usage Time</span>
+                                <span class="opacity-75">30 minutes</span>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start fs-14 mt-3">
+                            <img class="pt-1" src="./icons/cart.png" alt="cart icon">
+                            <div class="d-flex flex-column ms-3">
+                                <span>Average Buying Cost</span>
+                                <span class="opacity-75">50,000,000 MMK</span>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start fs-14 mt-3">
+                            <img class="pt-1" src="./icons/bank-card.png" alt="bank card icon">
+                            <div class="d-flex flex-column ms-3">
+                                <span>Total Bank Card Added</span>
+                                <span class="opacity-75">8</span>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start fs-14 mt-3">
+                            <img class="pt-1" src="./icons/time.png" alt="time icon">
+                            <div class="d-flex flex-column ms-3">
+                                <span>Average Use Time Frame</span>
+                                <span class="opacity-75">5:00 PM - 7:00 Pm</span>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start fs-14 mt-3">
+                            <img class="pt-1" src="./icons/net-profit.png" alt="net profit icon">
+                            <div class="d-flex flex-column ms-3">
+                                <span>Net Profit</span>
+                                <span class="opacity-75">20,000,000 MMK</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <aside class="right-sidebar d-flex flex-column">
+        <div>
+            <div class="d-flex align-items-center justify-content-between mb-3">
+                <div class="d-flex align-items-center">
+                    <p class="m-0 fw-bold">Action</p>
+                    <img class="ms-2" src="./icons/alert-circle.png" alt="alert icon">
+                </div>
+                <div class="fs-12 px-3 py-2 rounded-pill" style="background-color: #2c2c2e;">Edit</div>
+            </div>
+            <div class="row gx-3 text-white">
+                <div class="col-6">
+                    <button class="btn btn-danger border border-black py-2 w-100">Ban</button>
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-secondary border border-black py-2 w-100">Suspend</button>
+                </div>
+                <div class="col-12 mt-2">
+                    <textarea class="w-100 bg-secondary border border-black rounded-3" placeholder="Reason" rows="4"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5">
+            <a class="d-flex align-items-center text-decoration-none" href="#">
+                <img class="me-2" src="./icons/link.png" alt="link icon">
+                <p class="m-0 fs-14" style="color: var(--purple-color);">Top Ranking Buyers</p>
+            </a>
+            <div class="top-buyers rounded-4 mt-4">
+                <div class="d-flex">
+                    <div class="top-buyer-logo-container">
+                        <img class="top-buyer-logo" src="./images/burmese-emporians.png" alt="burmese-emporians logo">
+                    </div>
+                    <div class="top-buyer-info ms-4">
+                        <p class="m-0 fs-14 opacity-25">Burmese Emporians</p>
+                        <p class="m-0 fw-bold" style="font-size: 10px;">AW BANK UNI 234-46589-000</p>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="top-buyer-logo-container">
+                        <img class="top-buyer-logo" src="./images/u-shwe-yow.png" alt="u shwe yow logo">
+                    </div>
+                    <div class="top-buyer-info ms-4">
+                        <p class="m-0 fs-14 opacity-25">U Shwe Yow</p>
+                        <p class="m-0 fs-14 fw-bold">ABCD</p>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="top-buyer-logo-container">
+                        <img class="top-buyer-logo" src="./images/SY-Production-1 1.png" alt="sy-production logo">
+                    </div>
+                    <div class="top-buyer-info ms-4">
+                        <p class="m-0 fs-14 opacity-25">SY Production</p>
+                        <p class="m-0 fs-14 fw-bold">Yarning</p>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="top-buyer-logo-container">
+                        <img class="top-buyer-logo" src="./images/Taungtannni-1 1.png" alt="taung tan ni logo">
+                    </div>
+                    <div class="top-buyer-info ms-4">
+                        <p class="m-0 fs-14 opacity-25">Taung Tan Ni</p>
+                        <p class="m-0 fs-14 fw-bold">Longyi Production</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5">
+            <div class="d-flex align-items-center mb-3">
+                <p class="m-0 fw-bold">My Net Profit</p>
+                <img class="ms-2" src="./icons/alert-circle.png" alt="alert icon">
+            </div>
+
+            <div class="net-profit-card d-flex justify-content-between align-items-center">
+                <div class="position-relative" style="width: 70px;">
+                    <canvas id="profit-pie"></canvas>
+                    <div class="position-absolute top-50 start-50 translate-middle pt-2" style=" font-size: 12px;">75%
+                    </div>
+                </div>
+                <div>
+                    <p class="m-0 pt-2 pe-3">Last Week - <span
+                            style="font-size: 13px; color: var(--purple-color);">+25%</span></p>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script>
+        const profit = document.getElementById('profit-pie');
+
+        new Chart(profit, {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    data: [75, 25],
+                }]
+            },
+            options: {
+                backgroundColor: ['#5e5ce6', 'black'],
+                borderColor: '#2c2c2e',
+                spacing: 0.5,
+                cutout: '60%',
+                borderRadius: 5
+            }
+        });
+
+
+        const ctx = document.getElementById('referral-chart');
+
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    data: [80, 20],
+                }]
+            },
+            options: {
+                backgroundColor: ['#05c594', 'transparent'],
+                borderColor: 'transparent',
+                spacing: 0.5,
+                cutout: '85%',
+                borderRadius: 10,
+                rotation: 180
+            }
+        });
+
+        const salesChart = document.getElementById('sales-chart');
+
+        const getGradient = (context, colors) => {
+            if (!context.chart.chartArea) {
+                return;
+            }
+
+            const { ctx, chartArea } = context.chart;
+            const gradient = ctx.createLinearGradient(0, chartArea.top, 0, chartArea.bottom);
+            gradient.addColorStop(0, colors[0]);
+            gradient.addColorStop(1, colors[1]);
+
+            return gradient;
+        }
+
+        const labels = ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec',];
+
+        const colorSet1 = ['rgba(0, 117, 255, 1)', 'rgba(0, 117, 255, 0)'];
+        const colorSet2 = ['rgba(44, 217, 255, 0.36)', 'rgba(44, 217, 255, 0)'];
+
+        const data = {
+            labels: labels,
+            datasets: [
+                {
+                    data: [200, 220, 240, 355, 370, 460, 380, 310, 350, 250, 340, 430],
+                    fill: true,
+                    backgroundColor: (context) => getGradient(context, colorSet1),
+                    borderColor: 'rgba(0, 117, 255, 100)',
+                    tension: 0.5
+                },
+                {
+                    data: [500, 180, 170, 275, 210, 235, 245, 200, 110, 130, 170, 120],
+                    fill: true,
+                    backgroundColor: (context) => getGradient(context, colorSet2),
+                    borderColor: 'rgba(0, 117, 255, 100)',
+                    tension: 0.5
+                },
+            ]
+        };
+
+        new Chart(salesChart, {
+            type: 'line',
+            data: data,
+            options: {
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+
+                scales: {
+                    y: {
+                        beginAtZero: true,
+
+                        ticks: {
+                            color: "#CBD5E0",
+                            font: {
+                                size: 10,
+                                weight: 600
+                            },
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            color: "#CBD5E0",
+                            font: {
+                                size: 10,
+                                weight: 600
+                            },
+                            beginAtZero: true
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

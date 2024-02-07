@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Role Management</title>
 
     <!-- bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -15,16 +15,14 @@
 
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/807f2d6ec6.js" crossorigin="anonymous"></script>
-
-
 </head>
 
 <body>
     <header class="fixed-top d-flex justify-content-between align-items-center border-bottom border-black border-1 p-3">
         <div class="d-flex align-items-center ps-3">
             <nav class="header-nav">
-                <a class="me-4 text-white text-decoration-none fw-semibold">LOG</a>
                 <a class="me-4 text-white text-decoration-none opacity-50 active">Dashboard</a>
+                <a class="me-4 text-white text-decoration-none fw-semibold">Pending</a>
                 <a class="me-4 text-white text-decoration-none opacity-50">Role Management</a>
             </nav>
             <div class="search-icon ms-3"><i class="fa-solid fa-magnifying-glass"></i></div>
@@ -62,14 +60,14 @@
         </div>
 
         <div class="sidebar-icons d-flex flex-column align-items-center mt-3">
-            <div>
+            <div class="active">
                 <img src="./icons/human-human-avatar-male-icon-with-png-and-vector-format-for-free-19807 1.png"
                     alt="user icon">
             </div>
             <div class="mt-1 ">
                 <img src="./icons/clock.png" alt="clock icon">
             </div>
-            <div class="mt-1 active">
+            <div class="mt-1">
                 <img src="./icons/pie-chart.png" alt="pie-chart icon">
             </div>
             <div class="mt-1">
@@ -85,10 +83,119 @@
 
     </aside>
 
-    <main>
+    <main style="margin-right: 300px;">
         <!-- main content goes here -->
-    </main>
+        <div class="d-flex flex-column">
+            <p class="fs-12 --purple-color fw-semibold">Log Viewer</p>
+            <div class="d-flex align-items-center">
+                <img src="./images/mboss.png" alt="mboss logo" width="45" height="45">
+                <h1 class="fw-semibold fs-26 ms-3">M BOSS</h1>
+                <div class="ms-3">
+                    <button class="btn btn-secondary rounded-circle border-0"
+                        style="background-color: rgb(58, 58, 60); font-size: 18px;">
+                        +
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mt-4">
+            <div class="d-flex align-items-center">
+                <p class="m-0">Filter</p>
+                <button class="gray-border text-light bg-transparent rounded px-2 ms-2">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </button>
+            </div>
+            <div class="d-flex align-items-center fs-12">
+                <p class="m-0 text-secondary">Provision Month</p>
+                <div class="gray-border p-1 ms-3 rounded">
+                    March 2020 <i class="fa-solid fa-calendar-days ms-2 --purple-color"></i>
+                </div>
+            </div>
+        </div>
+        <table class="users-table text-black mt-4 w-100">
+            <thead>
+                <tr>
+                    <th class="ps-2">Name</th>
+                    <th>Type</th>
+                    <th class="text-center">Permissions</th>
+                    <th class="text-center">User Count</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="ps-2">
+                        <img src="./images/profile-pic.png" width="40" height="40" alt="profile-pic">
+                        <span class="ms-2">Person 1</span>
+                    </th>
+                    <td><span class="opacity-75">Super Admin</span></td>
+                    <td class="text-center"><span class="opacity-75">All</span></td>
+                    <td class="text-center"><span class="opacity-75">3</span></td>
+                    <td>
+                        <a href="#" class="text-decoration-none d-flex">
+                            <div class="more-button">
+                                <span class="text-black opacity-75">More</span>
+                            </div>
+                            <img src="./icons/Right.png" alt="right arrow icon">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="ps-2">
+                        <img src="./images/profile-pic1.png" width="40" height="40" alt="profile-pic">
+                        <span class="ms-2">Person 1</span>
+                    </th>
+                    <td><span class="opacity-75">Admin</span></td>
+                    <td class="text-center"><span class="opacity-75">None</span></td>
+                    <td class="text-center"><span class="opacity-75">1</span></td>
+                    <td>
+                        <a href="#" class="text-decoration-none d-flex">
+                            <div class="more-button">
+                                <span class="text-black opacity-75">More</span>
+                            </div>
+                            <img src="./icons/Right.png" alt="right arrow icon">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="ps-2">
+                        <img src="./images/profile-pic2.png" width="40" height="40" alt="profile-pic">
+                        <span class="ms-2">Person 1</span>
+                    </th>
+                    <td><span class="opacity-75">Buyer</span></td>
+                    <td class="text-center"><span class="opacity-75">None</span></td>
+                    <td class="text-center"><span class="opacity-75">31</span></td>
+                    <td>
+                        <a href="#" class="text-decoration-none d-flex">
+                            <div class="more-button">
+                                <span class="text-black opacity-75">More</span>
+                            </div>
+                            <img src="./icons/Right.png" alt="right arrow icon">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="ps-2">
+                        <img src="./images/profile-pic3.png" width="40" height="40" alt="profile-pic">
+                        <span class="ms-2">Person 1</span>
+                    </th>
+                    <td><span class="opacity-75">Seller</span></td>
+                    <td class="text-center"><span class="opacity-75">None</span></td>
+                    <td class="text-center"><span class="opacity-75">58</span></td>
+                    <td>
+                        <a href="#" class="text-decoration-none d-flex">
+                            <div class="more-button">
+                                <span class="text-black opacity-75">More</span>
+                            </div>
+                            <img src="./icons/Right.png" alt="right arrow icon">
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
+
+    </main>
 
     <aside class="right-sidebar d-flex flex-column">
         <div>
@@ -158,16 +265,18 @@
                     </div>
                 </div>
                 <div>
-                    <p class="m-0 pt-2 pe-3">Last Week - <span style="font-size: 13px; color: var(--purple-color);">+25%</span></p>
+                    <p class="m-0 pt-2 pe-3">Last Week - <span
+                            style="font-size: 13px; color: var(--purple-color);">+25%</span></p>
                 </div>
             </div>
         </div>
     </aside>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script>
-        const ctx = document.getElementById('profit-pie');
+        const profit = document.getElementById('profit-pie');
 
-        new Chart(ctx, {
+        new Chart(profit, {
             type: 'doughnut',
             data: {
                 datasets: [{

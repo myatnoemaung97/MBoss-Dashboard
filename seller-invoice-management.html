@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Invoice Management</title>
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/807f2d6ec6.js" crossorigin="anonymous"></script>
+
+    <!-- alpine js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+    <header class="fixed-top d-flex justify-content-between align-items-center border-bottom border-black border-1 p-3">
+        <div class="d-flex align-items-center ps-3">
+            <nav class="header-nav">
+                <a class="me-4 text-white text-decoration-none opacity-50 active">Dashboard</a>
+                <a class="me-4 text-white text-decoration-none fw-semibold">Pending</a>
+                <a class="me-4 text-white text-decoration-none opacity-50">Role Management</a>
+            </nav>
+            <div class="search-icon ms-3"><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+        <div class="d-flex align-items-center">
+            <a class="my-0 me-3 text-decoration-none text-white" href="#">M BOSS</a>
+            <div class="dropdown me-3">
+                <button class="btn btn-secondary icon-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="rounded-2" src="./images/admin.jpeg" alt="admin image"
+                        style="width: 50px; height: 50px;">
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+            <div>
+                <img src="./icons/sun.png" alt="sun icon">
+            </div>
+        </div>
+    </header>
+    <aside
+        class="left-sidebar d-flex flex-column align-items-center border-end border-black border-1 position-fixed top-0 bottom-0 start-0"
+        style="width: 75px;">
+
+        <button class="bg-transparent border-0 d-flex justify-content-center align-items-center"
+            style="width: 100%; height: 75px;">
+            <i class="fa-solid fa-bars" style="color: #a3a3a3;"></i>
+        </button>
+
+        <div class="py-3">
+            <img src="./images/mboss.png" alt="m boss logo" style="width: 45px; height: 45px;">
+        </div>
+
+        <div class="sidebar-icons d-flex flex-column align-items-center mt-3">
+            <div>
+                <img src="./icons/human-human-avatar-male-icon-with-png-and-vector-format-for-free-19807 1.png"
+                    alt="user icon">
+            </div>
+            <div class="mt-1 ">
+                <img src="./icons/clock.png" alt="clock icon">
+            </div>
+            <div class="mt-1 active">
+                <img src="./icons/pie-chart.png" alt="pie-chart icon">
+            </div>
+            <div class="mt-1">
+                <img src="./icons/globe.png" alt="globe icon">
+            </div>
+            <div class="mt-1">
+                <img src="./icons/loader.png" alt="loader icon">
+            </div>
+            <div class="mt-1">
+                <img src="./icons/command.png" alt="command icon">
+            </div>
+        </div>
+
+    </aside>
+
+    <main>
+        <!-- main content goes here -->
+        <div class="d-flex flex-column">
+            <p class="fs-12 --purple-color fw-semibold">Log Viewer</p>
+            <div class="d-flex align-items-center">
+                <img src="./images/mboss.png" alt="mboss logo" width="45" height="45">
+                <h1 class="fw-semibold fs-26 ms-3">M BOSS</h1>
+                <div class="ms-3">
+                    <button class="btn btn-secondary rounded-circle border-0"
+                        style="background-color: rgb(58, 58, 60); font-size: 18px;">
+                        +
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mt-4" style="width: 70%;">
+            <div class="d-flex align-items-start">
+                <p class="m-0">Filter</p>
+                <div x-data="{open:false}" class="d-flex align-items-start">
+                    <button x-data @click="open=!open" class="gray-border text-light bg-transparent rounded px-2 ms-2">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </button>
+                    <ul x-data x-show="open" class="list-unstyled text-center">
+                        <li class="gray-border rounded-1 px-2 py-1 fs-14">Approved</li>
+                        <li class="gray-border rounded-1 px-2 py-1 fs-14">Pending</li>
+                        <li class="gray-border rounded-1 px-2 py-1 fs-14">Denied</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex align-items-center fs-12">
+                <p class="m-0 text-secondary">Provision Month</p>
+                <div class="gray-border p-1 ms-3 rounded">
+                    March 2020 <i class="fa-solid fa-calendar-days ms-2 --purple-color"></i>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex align-items-center mt-4">
+            <img src="./images/profile-pic.png" alt="profile picture" width="80" height="80">
+            <div class="d-flex flex-fill justify-content-between align-items-center ms-3 pe-3">
+                <p style="font-size: 30px; color: #9f9f9f;">Billion Smile</p>
+                <p style="font-size: 25px; color: #717173;">Occupation - Seller</p>
+                <p style="font-size: 25px; color: #717173;">Status - <span class="text-success">Active</span></p>
+            </div>
+        </div>
+        <table class="invoice-table mt-4 w-100">
+            <thead>
+                <tr>
+                    <th class="text-center">Pendings</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th class="text-center"><span class="text-decoration-underline">Last 30 days</span></th>
+                    <th class="text-center">
+                        <img src="./icons/square-arrow-expand-01-sharp.png" alt="square arrow expand icon">
+                        <img class="ms-2" src="./icons/trash.png" alt="trash bin icon">
+                    </th>
+                </tr>
+            </thead>
+            <tbody style="font-size: 14px;">
+                <tr>
+                    <td class="text-center fs-5"><i class="fa-regular fa-square"></i></td>
+                    <td>2:22 PM</td>
+                    <td>September 22, 2023</td>
+                    <td>XXXX XXXX XXXX 4646</td>
+                    <td>MCB</td>
+                    <td>Status: Approved</td>
+                    <td>10,000,000 MMK</td>
+                    <td class="d-flex align-items-center justify-content-center">
+                        <img src="./icons/cashier.png" width="20" alt="cashier icon">
+                        <span class="ms-1">Market</span>
+
+                    </td>
+                    <td class="text-center"> 
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center fs-5"><i class="fa-regular fa-square"></i></td>
+                    <td>2:22 PM</td>
+                    <td>September 22, 2023</td>
+                    <td>XXXX XXXX XXXX 4646</td>
+                    <td>MD</td>
+                    <td>Status: Approved</td>
+                    <td>10,000,000 MMK</td>
+                    <td class="d-flex align-items-center justify-content-center">
+                        <img src="./icons/cashier.png" width="20" alt="cashier icon">
+                        <span class="ms-1">Market</span>
+
+                    </td>
+                    <td class="text-center">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center fs-5"><i class="fa-regular fa-square"></i></td>
+                    <td>2:22 PM</td>
+                    <td>September 22, 2023</td>
+                    <td>XXXX XXXX XXXX 4646</td>
+                    <td>UAB</td>
+                    <td>Status: Approved</td>
+                    <td>10,000,000 MMK</td>
+                    <td class="d-flex align-items-center justify-content-center">
+                        <img src="./icons/cashier.png" width="20" alt="cashier icon">
+                        <span class="ms-1">Market</span>
+
+                    </td>
+                    <td class="text-center">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center fs-5"><i class="fa-regular fa-square"></i></td>
+                    <td>2:22 PM</td>
+                    <td>September 22, 2023</td>
+                    <td>XXXX XXXX XXXX 4646</td>
+                    <td>???</td>
+                    <td>Status: Approved</td>
+                    <td>10,000,000 MMK</td>
+                    <td class="d-flex align-items-center justify-content-center">
+                        <img src="./icons/cashier.png" width="20" alt="cashier icon">
+                        <span class="ms-1">Market</span>
+                    </td>
+                    <td class="text-center">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center fs-5"><i class="fa-regular fa-square"></i></td>
+                    <td>2:22 PM</td>
+                    <td>September 22, 2023</td>
+                    <td>XXXX XXXX XXXX 4646</td>
+                    <td>???</td>
+                    <td>Status: Approved</td>
+                    <td>10,000,000 MMK</td>
+                    <td class="d-flex align-items-center justify-content-center">
+                        <img src="./icons/cashier.png" width="20" alt="cashier icon">
+                        <span class="ms-1">Market</span>
+
+                    </td>
+                    <td class="text-center">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

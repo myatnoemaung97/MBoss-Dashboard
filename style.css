@@ -1,33 +1,44 @@
+:root {
+    --purple-color: #5e5ce6;
+}
+
 body {
     margin: 0;
     padding: 0;
     background-color: #2c2c2e;
     color: white;
-    height: 5000px;
+}
+
+.fs-12 {
+    font-size: 12px;
 }
 
 .fs-14 {
     font-size: 14px;
 }
 
+.fs-26 {
+    font-size: 26px;
+}
+
+.--purple-color {
+    color: var(--purple-color);
+}
+
+
 /* header */
 
 header {
     margin-left: 75px;
     height: 75px;
+    background-color: rgb(44, 44, 47);
 }
 
 .header-nav a {
     position: relative;
     cursor: pointer;
-    color: #EBEBF5;
-    opacity: 0.6;
 }
 
-.header-nav a:first-of-type {
-    opacity: 1;
-    font-weight: 500;
-}
 
 .header-nav .active::before {
     content: '';
@@ -36,7 +47,7 @@ header {
     left: 0;
     right: 0;
     height: 2px;
-    background-color: #5e5ce6;
+    background-color: var(--purple-color);
     /* border-bottom: 2px solid blue; */
 }
 
@@ -88,6 +99,7 @@ header {
     width: 300px;
     padding: 25px;
     background-color: #1c1c1e;
+    overflow-y: auto;
 }
 
 .top-buyers {
@@ -124,4 +136,106 @@ header {
     padding-right: 15px;
     padding-left: 20px;
     padding-bottom: 10px;
+}
+
+main {
+    margin-top: 75px;
+    margin-left: 75px;
+    padding: 25px;
+}
+
+/* seller */
+
+.gray-border {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.invoice-table td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* users */
+
+.users-table {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+.users-table thead th {
+    background-color: #707070;
+}
+
+.users-table tbody td, .users-table tbody th {
+    background-color: #626161;
+}
+
+.users-table td, .users-table th {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.users-table thead tr th:first-of-type {
+    border-left: 1px solid #707070;
+    border-radius: 10px 0 0 10px;
+}
+
+.users-table thead tr th:last-of-type {
+    border-right: 1px solid #707070;
+    border-radius: 0 10px 10px 0;
+}
+
+.users-table tbody tr th:first-of-type {
+    border-left: 1px solid #626161;
+    border-radius: 10px 0 0 10px;
+}
+
+.users-table tbody tr td:last-child {
+    border-right: 1px solid #626161;
+    border-radius: 0 10px 10px 0;
+}
+
+.more-button {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+
+/* user detail */
+
+.orders-overview {
+    background: linear-gradient(#101428, #111527);
+}
+
+.referral-tracking {
+    background: linear-gradient(rgba(6, 11, 40, 0.74), rgba(14, 21, 58, 0.71));
+}
+
+.sales-overview {
+    background: linear-gradient(#101429, #121527);
+}
+
+
+@media screen and (max-width: 1100px) {
+    .management-detail {
+        flex-direction: column;
+    }
+
+    .management-detail > div:first-child {
+        order: 2;
+        width: 100%;
+    }
+
+    .management-detail > div:last-child {
+        order: 1;
+        width: 100%;
+        margin-left: 0 !important;
+        margin-bottom: 25px;
+    }
+
+    .orders-overview-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+    }
 }
