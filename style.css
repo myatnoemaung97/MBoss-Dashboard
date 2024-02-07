@@ -14,7 +14,7 @@ body {
 }
 
 .fs-14 {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .fs-26 {
@@ -52,41 +52,41 @@ header {
 }
 
 .icon-dropdown {
-    background: none;
-    border: none;
+  background: none;
+  border: none;
 }
 
 .search-icon {
-    border-left: 1px solid rgba(69, 68,68, 0.4);
-    padding-left: 33px;
+  border-left: 1px solid rgba(69, 68, 68, 0.4);
+  padding-left: 33px;
 }
 
 /* left sidebar */
 
 .left-sidebar {
-    width: 75px;
+  width: 75px;
 }
 
 .sidebar-icons {
-    background-color: #3a3a3c;
-    width: 40px;
-    padding: 5px 3px;
-    border-radius: 18px;
+  background-color: #3a3a3c;
+  width: 40px;
+  padding: 5px 3px;
+  border-radius: 18px;
 }
 
 .sidebar-icons div {
-    width: 100%;
-    height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .sidebar-icons .active {
-    background-color: #4e4e52;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  background-color: #4e4e52;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* right sidebar */
@@ -103,39 +103,39 @@ header {
 }
 
 .top-buyers {
-    background-color: #2c2c2e;
-    width: 250px;
-    padding: 8px;
+  background-color: #2c2c2e;
+  width: 250px;
+  padding: 8px;
 }
 
 .top-buyer-logo-container {
-    padding: 10px 0;
+  padding: 10px 0;
 }
 
 .top-buyer-logo {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 .top-buyer-info {
-    width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 10px;
-    padding-top: 10px;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .top-buyers div:last-of-type .top-buyer-info {
-    border-bottom: none;
-    padding-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .net-profit-card {
-    width: 250px;
-    background-color: #2c2c2e;
-    border-radius: 10px;
-    padding-right: 15px;
-    padding-left: 20px;
-    padding-bottom: 10px;
+  width: 250px;
+  background-color: #2c2c2e;
+  border-radius: 10px;
+  padding-right: 15px;
+  padding-left: 20px;
+  padding-bottom: 10px;
 }
 
 main {

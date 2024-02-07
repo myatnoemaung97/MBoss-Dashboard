@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Entry</title>
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/807f2d6ec6.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        .error-links {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="fixed-top d-flex justify-content-between align-items-center border-bottom border-black border-1 p-3">
+        <div class="d-flex align-items-center ps-3">
+            <nav class="header-nav">
+                <a class="me-4 text-white text-decoration-none">LOG</a>
+                <a class="me-4 text-white text-decoration-none active">Dashboard</a>
+                <a class="me-4 text-white text-decoration-none">Role Management</a>
+            </nav>
+            <div class="search-icon ms-3">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="d-flex align-items-center">
+            <a class="my-0 me-3 text-decoration-none text-white" href="#">M BOSS</a>
+            <div class="dropdown me-3">
+                <button class="btn btn-secondary icon-dropdown dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <img class="rounded-2" src="./images/admin.jpeg" alt="admin image"
+                        style="width: 50px; height: 50px" />
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+            <div>
+                <img src="./icons/sun.png" alt="sun icon" />
+            </div>
+        </div>
+    </header>
+    <aside
+        class="left-sidebar d-flex flex-column align-items-center border-end border-black border-1 position-fixed top-0 bottom-0 start-0"
+        style="width: 75px">
+        <button class="bg-transparent border-0 d-flex justify-content-center align-items-center"
+            style="width: 100%; height: 75px">
+            <i class="fa-solid fa-bars" style="color: #a3a3a3"></i>
+        </button>
+
+        <div class="py-3">
+            <img src="./images/mboss.png" alt="m boss logo" style="width: 45px; height: 45px" />
+        </div>
+
+        <div class="sidebar-icons d-flex flex-column align-items-center mt-5">
+            <div>
+                <img src="./icons/human-human-avatar-male-icon-with-png-and-vector-format-for-free-19807 1.png"
+                    alt="user icon" />
+            </div>
+            <div class="mt-1">
+                <img src="./icons/clock.png" alt="clock icon" />
+            </div>
+            <div class="mt-1 active">
+                <img src="./icons/pie-chart.png" alt="pie-chart icon" />
+            </div>
+            <div class="mt-1">
+                <img src="./icons/globe.png" alt="globe icon" />
+            </div>
+            <div class="mt-1">
+                <img src="./icons/loader.png" alt="loader icon" />
+            </div>
+            <div class="mt-1">
+                <img src="./icons/command.png" alt="command icon" />
+            </div>
+        </div>
+    </aside>
+
+    <main style="margin-top: 100px;">
+        <!-- main content goes here -->
+        <div style="margin-left: 100px;">
+            <p class="text-primary">Data Entries Log</p>
+            <div class="d-flex">
+                <div>
+                    <img src="./images/mboss.png" alt="" />
+                </div>
+
+                <div class="ms-3 fs-3">
+                    <p>M BOSS</p>
+                </div>
+
+                <a href="" style="font-size: larger; margin-top: 2px;">
+                    <i class="fa fa-plus ms-3 mt-2" style="color: gray;"></i>
+                </a>
+            </div>
+        </div>
+        <div style="margin-left: 100px;">
+            <div class="row">
+                <div class="col-7">
+                    <div class="border border-white p-1" style="border-radius: 10px;">
+                        <div class="d-flex justify-content-between">
+                            <p class="mt-2 ms-2">Data Entry Log History</p>
+                            <div class="mt-2 me-2">
+                                <button><i class="fa fa-chevron-left"></i></button>
+                                <button><i class="fa fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <div>
+                                    <div style="width: 270px;">
+                                        <div style="margin-left: 90px;">
+                                            <canvas id="dashboard-pie"></canvas>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="d-flex mt-3 ms-2">
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: red; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
+                                    </div>
+
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: green; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex ms-2">
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: blue; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
+                                    </div>
+
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: white; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex ms-2">
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: orange; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
+                                    </div>
+
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: yellow; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex ms-2">
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: pink; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
+                                    </div>
+
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: purple; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex ms-2">
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: lime; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
+                                    </div>
+
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: brown; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex ms-2">
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: aqua; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
+                                    </div>
+
+                                    <div style="margin-left: 90px;">
+                                        <span style="color: magenta; font-size: 15px;">&#9679</span>
+                                        <span style="font-size: 11px;">some</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-6">
+                                <div class="row">
+                                    <div class="col-6 d-flex justify-content-end mt-4">
+                                        <button style="width: 95px;" class="btn btn-secondary">January</button>
+                                    </div>
+                                    <div class="col-6 mt-4">
+                                        <button style="width: 95px;" class="btn btn-secondary">February</button>
+                                    </div>
+                                    <div class="col-6 d-flex justify-content-end mt-4">
+                                        <button style="width: 95px;" class="btn btn-secondary">March</button>
+                                    </div>
+                                    <div class="col-6 mt-4">
+                                        <button style="width: 95px;" class="btn btn-secondary">April</button>
+                                    </div>
+                                    <div class="col-6 d-flex justify-content-end mt-4">
+                                        <button style="width: 95px;" class="btn btn-secondary">May</button>
+                                    </div>
+                                    <div class="col-6 mt-4">
+                                        <button style="width: 95px;" class="btn btn-secondary">June</button>
+                                    </div>
+                                    <div class="col-6 d-flex justify-content-end mt-4">
+                                        <button style="width: 95px;" class="btn btn-secondary">July</button>
+                                    </div>
+                                    <div class="col-6 mt-4">
+                                        <button style="width: 95px;" class="btn btn-secondary">August</button>
+                                    </div>
+                                    <div class="col-6 d-flex justify-content-end mt-4">
+                                        <button style="width: 95px;" class="btn btn-secondary">September</button>
+                                    </div>
+                                    <div class="col-6 mt-4">
+                                        <button style="width: 95px;" class="btn btn-secondary">October</button>
+                                    </div>
+                                    <div class="col-6 d-flex justify-content-end mt-4">
+                                        <button style="width: 95px;" class="btn btn-secondary">November</button>
+                                    </div>
+                                    <div class="col-6 mt-4">
+                                        <button style="width: 95px;" class="btn btn-secondary">December</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-5">
+                    <div class="d-flex">
+                        <div style="width: 200px; margin-left: 32px;">
+                            <div class="border p-1" style="border-radius: 10px; background-color: crimson;">
+                                <p style="font-size: 12px; text-align: center;">Closed This Quarter</p>
+                                <h5 style="text-align: center;">100</h5>
+                                <h6 style="text-align: center;">Request Errors</h6>
+                                <span style="font-size: 11px;">Start</span><span
+                                    style="font-size: 11px; margin-left: 140px;">End</span>
+                                <div style="font-size: 11px;">
+                                    <span>01/01/2024</span><span style="margin-left: 69px;">01/02/2024</span>
+                                </div>
+                                <p style="font-size: 12px; text-align: center;margin-top: 13px;">Error Entry</p>
+                            </div>
+                        </div>
+                        <div style="width: 200px; margin-left: 57px;">
+                            <div class="border p-1" style="border-radius: 10px; background-color: blue;">
+                                <p style="font-size: 12px; text-align: center;">Closed This Quarter</p>
+                                <h5 style="text-align: center;">100</h5>
+                                <h6 style="text-align: center;">Request Errors</h6>
+                                <span style="font-size: 11px;">Start</span><span
+                                    style="font-size: 11px; margin-left: 140px;">End</span>
+                                <div style="font-size: 11px;">
+                                    <span>01/01/2024</span><span style="margin-left: 69px;">01/02/2024</span>
+                                </div>
+                                <p style="font-size: 12px; text-align: center;margin-top: 13px;">Error Entry</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex mt-5">
+                        <div style="width: 200px; margin-left: 32px;">
+                            <div class="border p-1" style="border-radius: 10px; background-color: crimson;">
+                                <p style="font-size: 12px; text-align: center;">Closed This Quarter</p>
+                                <h5 style="text-align: center;">100</h5>
+                                <h6 style="text-align: center;">Request Errors</h6>
+                                <span style="font-size: 11px;">Start</span><span
+                                    style="font-size: 11px; margin-left: 140px;">End</span>
+                                <div style="font-size: 11px;">
+                                    <span>01/01/2024</span><span style="margin-left: 69px;">01/02/2024</span>
+                                </div>
+                                <p style="font-size: 12px; text-align: center;margin-top: 13px;">Error Entry</p>
+                            </div>
+                        </div>
+                        <div style="width: 200px; margin-left: 57px;">
+                            <div class="border p-1" style="border-radius: 10px; background-color: blue;">
+                                <p style="font-size: 12px; text-align: center;">Closed This Quarter</p>
+                                <h5 style="text-align: center;">100</h5>
+                                <h6 style="text-align: center;">Request Errors</h6>
+                                <span style="font-size: 11px;">Start</span><span
+                                    style="font-size: 11px; margin-left: 140px;">End</span>
+                                <div style="font-size: 11px;">
+                                    <span>01/01/2024</span><span style="margin-left: 69px;">01/02/2024</span>
+                                </div>
+                                <p style="font-size: 12px; text-align: center;margin-top: 13px;">Error Entry</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="d-flex mt-4">
+                <div style="width: 200px;">
+                    <div class="border p-1" style="border-radius: 10px; background-color: crimson;">
+                        <p style="font-size: 12px; text-align: center;">Closed This Quarter</p>
+                        <h5 style="text-align: center;">100</h5>
+                        <h6 style="text-align: center;">Request Errors</h6>
+                        <span style="font-size: 11px;">Start</span><span
+                            style="font-size: 11px; margin-left: 140px;">End</span>
+                        <div style="font-size: 11px;">
+                            <span>01/01/2024</span><span style="margin-left: 69px;">01/02/2024</span>
+                        </div>
+                        <p style="font-size: 12px; text-align: center;margin-top: 13px;">Error Entry</p>
+                    </div>
+                </div>
+                <div style="width: 200px; margin-left:45px">
+                    <div class="border p-1" style="border-radius: 10px; background-color: crimson;">
+                        <p style="font-size: 12px; text-align: center;">Closed This Quarter</p>
+                        <h5 style="text-align: center;">100</h5>
+                        <h6 style="text-align: center;">Request Errors</h6>
+                        <span style="font-size: 11px;">Start</span><span
+                            style="font-size: 11px; margin-left: 140px;">End</span>
+                        <div style="font-size: 11px;">
+                            <span>01/01/2024</span><span style="margin-left: 69px;">01/02/2024</span>
+                        </div>
+                        <p style="font-size: 12px; text-align: center;margin-top: 13px;">Error Entry</p>
+                    </div>
+                </div>
+                <div style="width: 200px; margin-left:45px">
+                    <div class="border p-1" style="border-radius: 10px; background-color: crimson;">
+                        <p style="font-size: 12px; text-align: center;">Closed This Quarter</p>
+                        <h5 style="text-align: center;">100</h5>
+                        <h6 style="text-align: center;">Request Errors</h6>
+                        <span style="font-size: 11px;">Start</span><span
+                            style="font-size: 11px; margin-left: 140px;">End</span>
+                        <div style="font-size: 11px;">
+                            <span>01/01/2024</span><span style="margin-left: 69px;">01/02/2024</span>
+                        </div>
+                        <p style="font-size: 12px; text-align: center;margin-top: 13px;">Error Entry</p>
+                    </div>
+                </div>
+                <div style="width: 200px; margin-left:45px">
+                    <div class="border p-1" style="border-radius: 10px; background-color: crimson;">
+                        <p style="font-size: 12px; text-align: center;">Closed This Quarter</p>
+                        <h5 style="text-align: center;">100</h5>
+                        <h6 style="text-align: center;">Request Errors</h6>
+                        <span style="font-size: 11px;">Start</span><span
+                            style="font-size: 11px; margin-left: 140px;">End</span>
+                        <div style="font-size: 11px;">
+                            <span>01/01/2024</span><span style="margin-left: 69px;">01/02/2024</span>
+                        </div>
+                        <p style="font-size: 12px; text-align: center;margin-top: 13px;">Error Entry</p>
+                    </div>
+                </div>
+                <div style="width: 200px; margin-left:45px">
+                    <div class="border p-1" style="border-radius: 10px; background-color: crimson;">
+                        <p style="font-size: 12px; text-align: center;">Closed This Quarter</p>
+                        <h5 style="text-align: center;">100</h5>
+                        <h6 style="text-align: center;">Request Errors</h6>
+                        <span style="font-size: 11px;">Start</span><span
+                            style="font-size: 11px; margin-left: 140px;">End</span>
+                        <div style="font-size: 11px;">
+                            <span>01/01/2024</span><span style="margin-left: 69px;">01/02/2024</span>
+                        </div>
+                        <p style="font-size: 12px; text-align: center;margin-top: 13px;">Error Entry</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script>
+        const ctx2 = document.getElementById("dashboard-pie");
+
+        new Chart(ctx2, {
+            type: "doughnut",
+            data: {
+                datasets: [
+                    {
+                        label: "My First Dataset",
+                        data: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
+                        backgroundColor: [
+                            "red",
+                            "green",
+                            "blue",
+                            "white",
+                            "orange",
+                            "yellow",
+                            "pink",
+                            "purple",
+                            "lemon",
+                            "brown",
+                            "aqua",
+                            "magenta",
+                        ],
+                        hoverOffset: 4,
+                    },
+                ],
+            },
+            options: {
+                borderWidth: 2,
+            },
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
